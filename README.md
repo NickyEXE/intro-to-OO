@@ -11,13 +11,18 @@ Intro to Object Orientation
 - [ ] Get more practice with array methods (`each`, `map`, `select`, `find`)
 
 ## Outline
+- Objects: Things that encapsulate both data and behavior, usually for a common group of things
+-  Method: A behavior that an object has
 - Discuss the benefits of OOP
 - Discuss classes and instances
   - describe methods as the 'interface' for our class
+  - "hi" is the instance, String is the Class
+  - 1 is the instance, Integer is the Class
 - Demonstrate class methods and instance methods on in-built Ruby classes (String, Array)
   - methods as sending messages
   - different approaches for sending messages (dot notation, `send`)
   - Monkey patching
+    - Modifying built in ruby classes
 - Build a class using the deliverables below
   - `new` and `initialize`
   - instance methods
@@ -41,11 +46,14 @@ clown = { name: "Krusty", age: 55, skills: "Drinking", fears: "Failure" }
 
 Write an implementation of a clown class that meets the following requirements:
 
-- [] can get the name, age, skills and fear for a clown
-- [] can say hello and print out their details to the screen
-"Hello my name is Krusty. I'm 55 years old. I'm good at drinking and terrified of failure."
-- [] can juggle -> puts some bowling pin emojis to the screen
-- [] overcome fears
-- [] can show me all the clowns that have been created
+- can get the name, alias, powers,power level of a superhero, universe, costume color
+
+
+- [x] can get the name, alias, powers,power level of a superhero, universe, costume color
+- [x] can say hello and print out their details to the screen, heroically
+"Hello my name is Doreen Green. My alias is Squirrel Girl. I have the proportionate speed and strength of a squirrel. I'm from Marvel. My costume is green and brown."
+- [x] change powers and costume color
+- [] can punch -> puts some fist emojis to the screen
 *bonus*
-- [] can find a clown based on their name
+- [] can show me all the superheroes that have been created
+- [] can find a superhero based on their alias
