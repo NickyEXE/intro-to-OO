@@ -51,6 +51,8 @@ class Superhero
   end
 end
 
+
+# seeds
 sg = Superhero.new(
   "Doreen Green",
   "Squirrel Girl",
@@ -59,10 +61,62 @@ sg = Superhero.new(
   "Marvel",
   "Green and Brown"
 )
-wolverine = Superhero.new("Logan", "Wolverine", "Long Nails", 5, "Marvel")
-she_hulk = Superhero.new("Jennifer Walters", "She-Hulk", "Law Degree", 3, "Marvel", "Suit")
-booster_gold = Superhero.new("Michael Carter", "Booster Gold", "Stole stuff from the future", 4, "DC", "Yellow, Blue")
-wiccan = Superhero.new("Billy Kaplan", "Wiccan", "Reality Warping", 6, "Marvel", "Red and Black")
-robin = Superhero.new("Dick Grayson", "Robin", "Did circus", 6, "DC", "Red, Green, Yellow")
-mermaid_man = Superhero.new("Ernie", "Mermaid Man", "Smells evil", 2, "Bikini Bottom Extended Universe", "Yellow and black")
-barnacle_boy = Superhero.new("Tim", "Barnacle Boy", "Unknown", 1, "Bikini Bottom Extended Universe")
+wolverine = Superhero.new(
+  "Logan",
+  "Wolverine",
+  "Long Nails",
+  5,
+  "Marvel"
+  )
+she_hulk = Superhero.new(
+  "Jennifer Walters",
+  "She-Hulk",
+  "Law Degree",
+  3,
+  "Marvel",
+  "Suit"
+  )
+booster_gold = Superhero.new(
+  "Michael Carter",
+  "Booster Gold",
+  "Stole stuff from the future",
+  4,
+  "DC",
+  "Yellow,
+  Blue"
+  )
+wiccan = Superhero.new(
+  "Billy Kaplan",
+  "Wiccan",
+  "Reality Warping",
+  6,
+  "Marvel",
+  "Red and Black"
+  )
+robin = Superhero.new(
+  "Dick Grayson",
+  "Robin",
+  "Did circus",
+  6,
+  "DC",
+  "Red,
+  Green,
+  Yellow"
+  )
+mermaid_man = Superhero.new(
+  "Ernie",
+  "Mermaid Man",
+  "Smells evil",
+  2,
+  "Bikini Bottom Extended Universe",
+  "Yellow and black"
+  )
+barnacle_boy = Superhero.new(
+  "Tim",
+  "Barnacle Boy",
+  "Unknown",
+  1,
+  "Bikini Bottom Extended Universe",
+  "Red, Blue"
+  )
+binding.pry
