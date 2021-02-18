@@ -49,12 +49,20 @@ class Superhero
     puts "I have #{@powers}. My power level is #{@power_level}."
     puts "I'm from #{@universe}. My costume is #{@costume_color}."
   end
-
 end
 
-# "Hello my name is Doreen Green. My alias is Squirrel Girl. I have the proportionate speed and strength of a squirrel. I'm from Marvel. My costume is green and brown."
-
-sg = Superhero.new("Doreen Green", "Squirrel Girl", "The proportionate speed and strength of a Squirrel", 9999, "Marvel", "Green and Brown")
+sg = Superhero.new(
+  "Doreen Green",
+  "Squirrel Girl",
+  "The proportionate speed and strength of a Squirrel",
+  9999,
+  "Marvel",
+  "Green and Brown"
+)
 wolverine = Superhero.new("Logan", "Wolverine", "Long Nails", 5, "Marvel")
-
-binding.pry
+she_hulk = Superhero.new("Jennifer Walters", "She-Hulk", "Law Degree", 3, "Marvel", "Suit")
+booster_gold = Superhero.new("Michael Carter", "Booster Gold", "Stole stuff from the future", 4, "DC", "Yellow, Blue")
+wiccan = Superhero.new("Billy Kaplan", "Wiccan", "Reality Warping", 6, "Marvel", "Red and Black")
+robin = Superhero.new("Dick Grayson", "Robin", "Did circus", 6, "DC", "Red, Green, Yellow")
+mermaid_man = Superhero.new("Ernie", "Mermaid Man", "Smells evil", 2, "Bikini Bottom Extended Universe", "Yellow and black")
+barnacle_boy = Superhero.new("Tim", "Barnacle Boy", "Unknown", 1, "Bikini Bottom Extended Universe")
