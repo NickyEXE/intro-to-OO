@@ -3,7 +3,7 @@ require 'pry'
 class Superhero
 
   attr_reader :secret_name, :powers, :universe, :costume_color
-  attr_writer :name, :costume_color
+  attr_writer :costume_color
   attr_accessor :power_level
 
   def initialize(name, secret_name, powers, power_level, universe, costume_color = "yellow")
@@ -21,7 +21,6 @@ class Superhero
   end
 
   # # setter/writer method
-
   def name=(name)
     puts "hello"
     @name = name.upcase
@@ -34,7 +33,6 @@ class Superhero
   # end
 
   # # setter/writer method
-
   #  this is the same as writing attr_writer :secret_name
   # def secret_name=(secret_name)
   #   @secret_name = secret_name
