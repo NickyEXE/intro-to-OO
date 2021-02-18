@@ -1,13 +1,27 @@
 # For your exercise
 
-## Define a new class, Kaiju, that
+## [x] Define a new class, Kaiju, that
 
-- [] Is initialized with a Kaiju's name, powers, and latest city destroyed
-- [] Can rewrite the latest city destroyed as it destroys new cities
+- [x] Is initialized with a Kaiju's name, powers, and latest city destroyed
+- [x] Can rewrite the latest city destroyed as it destroys new cities
 - [] Can roar (puts an onomatopoeia of your choice out into the console when #roar is called on it)
 - [] Can stomp (puts out "KAIJU_NAME has stomped a new house" when #stomp is called on it)
 Bonus:
 - [] Keeps track of the amount of houses that have been stomped and puts "KAIJU_NAME has now stomped NUMBER_OF_HOUSES houses"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Challenge part 2
 - [] Make a `#roar_and_stomp` method that calls the `#roar` method and then the `#stomp` method.

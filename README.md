@@ -46,14 +46,14 @@ clown = { name: "Krusty", age: 55, skills: "Drinking", fears: "Failure" }
 
 Write an implementation of a clown class that meets the following requirements:
 
-- can get the name, alias, powers,power level of a superhero, universe, costume color
+- can get the name, secret_name, powers,power level of a superhero, universe, costume color
 
 
-- [x] can get the name, alias, powers,power level of a superhero, universe, costume color
+- [x] can get the name, secret_name, powers,power level of a superhero, universe, costume color
 - [x] can say hello and print out their details to the screen, heroically
-"Hello my name is Doreen Green. My alias is Squirrel Girl. I have the proportionate speed and strength of a squirrel. I'm from Marvel. My costume is green and brown."
+"Hello my name is Doreen Green. My secret_name is Squirrel Girl. I have the proportionate speed and strength of a squirrel. I'm from Marvel. My costume is green and brown."
 - [x] change powers and costume color
 - [] can punch -> puts some fist emojis to the screen
 *bonus*
 - [] can show me all the superheroes that have been created
-- [] can find a superhero based on their alias
+- [] can find a superhero based on their secret_name
