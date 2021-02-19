@@ -2,9 +2,11 @@ require 'pry'
 
 class Superhero
 
-  attr_reader :secret_name, :powers, :universe, :costume_color
+  attr_reader :secret_name, :powers, :costume_color
   attr_writer :costume_color
   attr_accessor :power_level
+
+  @@all = []
 
   def initialize(name, secret_name, powers, power_level, universe, costume_color = "yellow")
     @name = name
@@ -13,6 +15,25 @@ class Superhero
     @power_level = power_level
     @universe = universe
     @costume_color = costume_color
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.count
+    self.all.size
+  end
+
+  def self.find_by_secret_name(secret_name)
+    self.all.find do |instance|
+      instance.secret_name == secret_name
+    end
+  end
+
+  def self.hi
+    puts "Superhero class says hi"
   end
 
   # # getter/reader method
@@ -38,7 +59,13 @@ class Superhero
   #   @secret_name = secret_name
   # end
 
+  def snap
+    self.thanos
+    self.power_level = 0
+  end
+
   def thanos
+    puts "#{self.secret_name} says:"
     puts "mr stark, I don't feel so good"
   end
 
@@ -51,7 +78,7 @@ end
 
 
 # seeds
-sg = Superhero.new(
+Superhero.new(
   "Doreen Green",
   "Squirrel Girl",
   "The proportionate speed and strength of a Squirrel",
@@ -59,14 +86,14 @@ sg = Superhero.new(
   "Marvel",
   "Green and Brown"
 )
-wolverine = Superhero.new(
+Superhero.new(
   "Logan",
   "Wolverine",
   "Long Nails",
   5,
   "Marvel"
   )
-she_hulk = Superhero.new(
+Superhero.new(
   "Jennifer Walters",
   "She-Hulk",
   "Law Degree",
@@ -74,16 +101,15 @@ she_hulk = Superhero.new(
   "Marvel",
   "Suit"
   )
-booster_gold = Superhero.new(
+Superhero.new(
   "Michael Carter",
   "Booster Gold",
   "Stole stuff from the future",
   4,
   "DC",
-  "Yellow,
-  Blue"
+  "Yellow, Blue"
   )
-wiccan = Superhero.new(
+Superhero.new(
   "Billy Kaplan",
   "Wiccan",
   "Reality Warping",
@@ -91,7 +117,7 @@ wiccan = Superhero.new(
   "Marvel",
   "Red and Black"
   )
-robin = Superhero.new(
+Superhero.new(
   "Dick Grayson",
   "Robin",
   "Did circus",
@@ -101,7 +127,7 @@ robin = Superhero.new(
   Green,
   Yellow"
   )
-mermaid_man = Superhero.new(
+Superhero.new(
   "Ernie",
   "Mermaid Man",
   "Smells evil",
@@ -109,7 +135,7 @@ mermaid_man = Superhero.new(
   "Bikini Bottom Extended Universe",
   "Yellow and black"
   )
-barnacle_boy = Superhero.new(
+Superhero.new(
   "Tim",
   "Barnacle Boy",
   "Unknown",
@@ -117,4 +143,7 @@ barnacle_boy = Superhero.new(
   "Bikini Bottom Extended Universe",
   "Red, Blue"
   )
+
+# barnacle_boy.thanos
+# Superhero.hi
 binding.pry
