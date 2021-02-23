@@ -144,6 +144,42 @@ Superhero.new(
   "Red, Blue"
   )
 
+captain_marvel = {
+  name: "Carol Danvers",
+  secret_name: "Captain Marvel",
+  powers: "Flight, Power",
+  power_level: 20,
+  universe: "Marvel",
+  costume_color: "Red, Blue"
+}
+
+young_avengers = [
+  {
+    name: "Kate Bishop",
+    secret_name: "Hawkeye",
+    powers: "Arrows",
+    power_level: 1,
+    universe: "Marvel",
+    costume_color: "Purple"
+  },
+  {
+    name: "Loki",
+    secret_name: "Loki",
+    powers: "Lies, Illusions",
+    power_level: 6,
+    universe: "Marvel",
+    costume_color: "Green"
+  },
+    {
+      name: "America Chavez",
+      secret_name: "Miss America",
+      powers: "Punches through dimensions",
+      power_level: 5,
+      universe: "Marvel",
+      costume_color: "Denim"
+    }
+]
+
 # barnacle_boy.thanos
 # Superhero.hi
 binding.pry
