@@ -15,11 +15,27 @@ class Superhero
     @power_level = power_level
     @universe = universe
     @costume_color = costume_color
-    @@all << self
+    self.save
+  end
+
+  def self.create_from_hash(hash)
+    self.new(hash[:name], hash[:secret_name], hash[:powers], hash[:power_level], hash[:universe], hash[:costume_color])
+  end
+
+  def self.create_from_array(array)
+    array.each{|superhero| self.create_from_hash(superhero)}
+  end
+
+  def save
+      @@all << self if validate?
   end
 
   def self.all
     @@all
+  end
+
+  def self.create_marvel_superhero(name, secret_name, powers, power_level, costume_color = "yellow")
+    self.new(name, secret_name, powers, power_level, "Marvel", costume_color)
   end
 
   def self.count
@@ -74,6 +90,21 @@ class Superhero
     puts "I have #{@powers}. My power level is #{@power_level}."
     puts "I'm from #{@universe}. My costume is #{@costume_color}."
   end
+
+  private
+
+  def validate?
+    if (@power_level >= 10000)
+      puts "#{@secret_name}'s power level must be less than 10000. Update and then call save."
+    elsif @name.length > 35
+      puts "#{@secret_name}'s name is too long. It must be 35 characters or less. Update and then call save."
+    elsif @name == "Wade Wilson"
+      puts "You're an anti-hero at best and you know it. You do not belong in the Superhero class."
+    else
+      return true
+    end
+  end
+
 end
 
 
@@ -109,14 +140,14 @@ Superhero.new(
   "DC",
   "Yellow, Blue"
   )
-Superhero.new(
-  "Billy Kaplan",
-  "Wiccan",
-  "Reality Warping",
-  6,
-  "Marvel",
-  "Red and Black"
-  )
+# Superhero.new(
+#   "Billy Kaplan",
+#   "Wiccan",
+#   "Reality Warping",
+#   6,
+#   "Marvel",
+#   "Red and Black"
+#   )
 Superhero.new(
   "Dick Grayson",
   "Robin",
@@ -145,12 +176,12 @@ Superhero.new(
   )
 
 captain_marvel = {
+  power_level: 20,
+  universe: "Marvel",
+  costume_color: "Red, Blue",
   name: "Carol Danvers",
   secret_name: "Captain Marvel",
   powers: "Flight, Power",
-  power_level: 20,
-  universe: "Marvel",
-  costume_color: "Red, Blue"
 }
 
 young_avengers = [
@@ -179,6 +210,18 @@ young_avengers = [
       costume_color: "Denim"
     }
 ]
+
+Superhero.create_marvel_superhero(
+  "Billy Kaplan",
+  "Wiccan",
+  "Reality Warping",
+  6,
+  "Red and Black"
+  )
+
+deadpool = Superhero.new("Wade Wilson", "Deadpool", "Regenerates, breaks fourth wall, is handsome", 100000, "Marvel", "red")
+deadpool.power_level = 4
+deadpool.save
 
 # barnacle_boy.thanos
 # Superhero.hi
